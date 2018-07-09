@@ -25,7 +25,7 @@ componentWillMount() {
 
 //then capture la réponse et remplace le state json par ma reponse
 getDataApi = () => {
-  axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${ this.state.input === '' ? 'Saigon' : this.state.input }&appid=${key}`)
+  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${ this.state.input === '' ? 'Saigon' : this.state.input }&appid=${key}`)
   .then((response) => {
     console.log(response)
   this.setState({ json: response, error:'' }, () => {
